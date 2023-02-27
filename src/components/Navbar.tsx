@@ -1,19 +1,25 @@
 import Image from "next/image";
 import React from "react";
-import { Ellipse, Mail, Notification, Search, User} from "./AllSVG";
+import {
+  Ellipse,
+  Mail,
+  Notification,
+  Search,
+  User
+} from "./AllSVG";
 import Frame from "./Frame";
 
 const Navbar = () => {
   return (
     <>
       <div className="h-[293px] w-full flex flex-col bg-light border-b border-[#0000001a] shadow-[0px,1px,2px,rgba(0,0,0,0.06)]">
-        <div className="flex p-6 justify-between items-center md:gap-[20px] lg:gap-[20px] xl:gap-[40px] 2xl:gap-[60px] gap-14">
+        <div className="flex p-6 justify-between items-center md:gap-[20px] lg:gap-[20px] xl:gap-[40px] 2xl:gap-[70px] gap-14">
           <Image
             className="w-[145.31px] h-9"
             src={require("../assets/images/logo.png")}
             alt="logo"
           />
-          <ul className="text-base font-normal text-dark flex items-center justify-start md:gap-[20px] lg:gap-[20px] xl:gap-[40px] 2xl:gap-[60px] gap-14">
+          <ul className="text-base font-normal text-dark flex items-center justify-start md:gap-[20px] lg:gap-[20px] xl:gap-[40px] 2xl:gap-[70px] gap-14">
             <li className="font-bold text-primary relative">
               Dashboard{" "}
               <Ellipse
@@ -46,7 +52,7 @@ const Navbar = () => {
           <button className="py-1 px-2 flex items-center justify-center gap-1 font-bold text-xs text-[#3CAA2A] h-[26px] bg-[#3caa2a33] rounded">
             <Ellipse color="#3CAA2A" /> STATUS
           </button>
-          <div className="flex items-between md:gap-[20px] lg:gap-[20px] xl:gap-[30px] 2xl:gap-[40px] gap-14">
+          <div className="flex items-between md:gap-[20px] lg:gap-[20px] xl:gap-[40px] gap-14">
             <Notification />
             <Mail />
             <User />

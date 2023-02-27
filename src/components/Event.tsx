@@ -81,16 +81,16 @@ const Event = () => {
                     AIRDROP
                   </div>
                 </div>
-                <div className="flex items-center !h-7 justify-center py-1 px-2 gap-2 bg-[#0000001a] rounded-lg">
+                <div className="flex items-center justify-center py-1 px-2 gap-2 bg-[#0000001a] rounded-lg w-30">
                   <Vector />
-                  <p className="text-sm font-bold text-primary whitespace-nowrap">
+                  <p className="text-sm font-bold text-primary">
                     {item?.calender}
                   </p>
                 </div>
                 <div className="flex items-center py-1 px-2 gap-2 backdrop-blur rounded-lg text-sm text-[#000000b3] ml-[-85px]">
                   <VectorTime />
                   <h3 className="font-bold">Started</h3>
-                  <p className="font-normal whitespace-nowrap">{item?.date}</p>
+                  <p className="font-normal">{item?.date}</p>
                 </div>
               </div>
               <p className="font-normal text-base text-primary">{item?.desc}</p>
@@ -132,7 +132,7 @@ const Event = () => {
                 />
               )}
               <div className="flex items-center gap-2">
-                <button className="flex items-center justify-center py-2 px-4 gap-2 w-[126px] h-[40px] bg-primary rounded-lg font-bold text-base text-light whitespace-nowrap">
+                <button className="flex items-center justify-center py-2 px-4 gap-2 w-[126px] h-[40px] bg-primary rounded-lg font-bold text-base text-light">
                   More Details
                 </button>
                 {item?.transaction?.success !== 100 && (
@@ -140,8 +140,8 @@ const Event = () => {
                     <button className="flex items-center justify-center py-2 px-4 gap-2 w-[82px] h-[40px] border border-primary rounded-lg font-normal text-base text-primary">
                       Cancel
                     </button>
-                    <div className="flex items-center pl-2 gap-2 w-[196px] h-[24px] check whitespace-nowrap">
-                      <input type="checkbox" defaultChecked />
+                    <div className="flex items-center pl-2 gap-2 w-[196px] h-[24px] check">
+                      <input type="checkbox" checked={true} />
                       <label className="font-normal text-base text-primary">
                         Receive report on email
                       </label>
@@ -150,7 +150,7 @@ const Event = () => {
                 )}
               </div>
             </div>
-            <div className="flex items-center justify-center">
+            <div className="flex items-center">
               {item?.class === "first-event" ? (
                 <Image
                   src={require("../assets/images/FirstEvent.png")}
